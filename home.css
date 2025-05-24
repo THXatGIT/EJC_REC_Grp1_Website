@@ -3,14 +3,23 @@
     position: sticky;
     top: 0%;
     margin-bottom: 2px;
+    z-index: 10;
 }
 #nav button{
     width:33vw;
     height: 50px;
     border: 5px solid black;
+    font-size: medium;
 }
 
+#nav button span{
+    display: inline-block;
+    transition: transform 1s;
+}
 
+.spin{
+    transform: rotate(360deg) ;
+}
 
 .wrapper{
   display:grid;
@@ -18,32 +27,53 @@
   grid-template-rows: 500px 250px 250px;
 }
 
-.wrapper div{
+#pfp{
+    display: block;
+    width:75%;
+    height: auto;
+    margin: auto;
+    margin-top: 3%;
+}
+
+#crop{
+    width:25%;
+    height: 90%;
+    overflow: hidden;
+    margin-left: 5%;
+}
+.wrapper #box{
   border: 5px solid black;
   margin: 2px;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
   text-align: center;
  }
 
-.wrapper div:nth-child(1){
+.wrapper #box:nth-child(1){
     grid-column-start: 1;
     grid-column-end: 4;
     background-color: red;
 }
-.wrapper div:nth-child(2){
+.wrapper #box:nth-child(1) img{
+    display: block;
+    height:100%;
+    width: auto;
+    margin: auto;
+}
+.wrapper #box:nth-child(2){
     grid-row-start:2;
     grid-row-end: 4;
   background-color: orange;
 }
-.wrapper div:nth-child(3){
+.wrapper #box:nth-child(3){
   background-color: yellow;
 }
-.wrapper div:nth-child(4){
+.wrapper #box:nth-child(4){
   background-color: lightgreen;
 }
-.wrapper div:nth-child(5){
+.wrapper #box:nth-child(5){
   background-color: blue;
 }
-.wrapper div:nth-child(6){
+.wrapper #box:nth-child(6){
   background-color: purple;
 }

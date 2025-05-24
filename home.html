@@ -18,17 +18,26 @@ Will be asked to present so understand your code!
 </head>
 <body>
 <div id="nav">
- <button>Home</button>
- <button>About</button>
- <button>Group's choice</button>
+ <button id="home">Home 🏡</button>
+ <button id="about" onmouseleave="spin()" onmouseenter="spin()">About <span>🔍</span></button>
+ <button id="tbd">Group's choice</button>
 </div>
 <div class="wrapper">
-  <div>Caleb</div>
-  <div>Hong Xi</div>
-  <div>Le Yang</div>
-  <div>Gerald</div>
-  <div>Valentine</div>
-  <div>Ilakiya</div>
+  <div id="box">Caleb
+    <div id="crop">
+        <img src="caleb_1.jpeg" style="width:160%; height:auto; translate:-10% -20%">
+    </div>
+  </div>
+  <div id="box">Hong Xi
+    <img id="pfp" src="THX1.jpeg">
+  </div>
+  <div id="box">Le Yang</div>
+  <div id="box">Gerald
+    <img id="pfp" src="Gerald2.png">
+  </div>
+  <div id="box">Valentine</div>
+  <div id="box">Ilakiya</div>
 </div>
+<script src="home.js"></script>
 </body>
 </html>
