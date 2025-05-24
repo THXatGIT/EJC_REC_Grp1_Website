@@ -13,37 +13,40 @@ Will be asked to present so understand your code!
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="menu.css">
     <title>Group 1's Home Page :)</title>
     
 </head>
 <body>
 <div id="nav">
  <button id="home">Home 🏡</button>
- <button id="about" onmouseleave="spin()" onmouseenter="spin()">About <span>🔍</span></button>
+ <button id="about" onclick="location.href='./about.html'" onmouseleave="spin()" onmouseenter="spin()">About <span>🔍</span></button>
  <button id="tbd" onclick="CTF()"><span  id="t">T</span>AB O<span id="f">F</span> <span id="c">C</span>HOICE</button>
 </div>
 <div class="wrapper">
-  <div class="box">Caleb
+  <div class="box" onclick="location.href='./about.html#Caleb'">Caleb
     <div style="display: block; position:absolute; left:40%; top:20%; font-size: 11vw;">  Group <br> Leader</div>
     <div id="crop">
         <img src="caleb_1.jpeg" style="width:160%; height:auto; translate:-7% -20%">
     </div>
   </div>
-  <div class="box" onmouseenter="swapimg1()" onmouseleave="swapimg2()">Hong Xi
+  <div class="box" onclick="location.href='./about.html#HongXi'" onmouseenter="swapimg1()" onmouseleave="swapimg2()">Hong Xi
     <img id="pfp" src="THX1.jpeg">
   </div>
-  <div class="box">Le Yang
+  <div class="box" onclick="location.href='./about.html#Leyang'">Le Yang
     <img src="Leyang.jpeg" style="display: block; width:auto; height:85%; margin: auto; border-radius: 1vw;">
   </div>
-  <div class="box">Jerald
+  <div class="box" onclick="location.href='./about.html#Jerald'">Jerald
     <div id="crop1">
     <img src="jerald2.JPG" style="width:100%; height:auto; translate: 0% -45%;">
     </div>
   </div>
-  <div class="box">Valentine
+  <div class="box" onclick="location.href='./about.html#Valentine'">Valentine
     <img id="pfp" src="Valentine2.png ">
   </div>
-  <div class="box">Ilakiya</div>
+  <div class="box" onclick="location.href='./about.html#Ilakiya'">Ilakiya
+    <img src="Ikiylia.png" style="display: block; height: 90%; width: auto; margin: auto;">
+  </div>
 </div>
 <script src="home.js"></script>
 </body>

@@ -1,0 +1,48 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#Caleb , #HongXi, #Leyang, #Jerald, #Valentine, #Ilakiya{
+    height: 85vh;
+    border: 5px solid black;
+    margin-bottom: 3px;
+}
+
+#Caleb {
+    background-color: red;
+}
+#HongXi{
+    background-color: orange;
+}
+#Leyang{
+    background-color: yellow;
+}
+
+#Jerald{
+    background-color: green;
+}
+#Valentine{
+    background-color: blue;
+}
+#Ilakiya{
+    background-color: purple;
+}
+
+.leftside{
+    width: 33%;
+    text-align: center;
+    font-size: 30px;
+}
+
+.ff{
+    display: block;
+    position: absolute;
+    width:66%;
+    left:33%;
+    font-size: 30px;
+    margin-right: 1%;
+    text-align: center;
+}

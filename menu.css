@@ -1,0 +1,38 @@
+#nav{
+    display: flex;
+    position: sticky;
+    top: 0%;
+    margin-bottom: 2px;
+    z-index: 10;
+}
+#nav button{
+    width:33vw;
+    height: 50px;
+    border: 5px solid black;
+    font-size: medium;
+    transition: 1s;
+}
+
+#nav button:hover{
+    background-color: rgb(190, 135, 75);
+}
+
+#nav button span{
+    display: inline-block;
+}
+
+.spin{
+    transform: rotate(360deg) ;
+    transition: transform 1s;
+}
+
+.ctf{
+  color: rgba(0,0,0,0);
+  background-color: rgb(180, 1, 1);
+  pointer-events: none;
+}
+
+#c,#t,#f{
+  position: relative;
+  transition: 3s;
+}
