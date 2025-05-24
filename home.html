@@ -20,23 +20,23 @@ Will be asked to present so understand your code!
 <div id="nav">
  <button id="home">Home 🏡</button>
  <button id="about" onmouseleave="spin()" onmouseenter="spin()">About <span>🔍</span></button>
- <button id="tbd">Group's choice</button>
+ <button id="tbd" onclick="CTF()"><span  id="t">T</span>AB O<span id="f">F</span> <span id="c">C</span>HOICE</button>
 </div>
 <div class="wrapper">
-  <div id="box">Caleb
+  <div class="box">Caleb
     <div id="crop">
-        <img src="caleb_1.jpeg" style="width:160%; height:auto; translate:-10% -20%">
+        <img src="caleb_1.jpeg" style="width:160%; height:auto; translate:-7% -20%">
     </div>
   </div>
-  <div id="box">Hong Xi
+  <div class="box" onmouseenter="swapimg1()" onmouseleave="swapimg2()">Hong Xi
     <img id="pfp" src="THX1.jpeg">
   </div>
-  <div id="box">Le Yang</div>
-  <div id="box">Gerald
+  <div class="box">Le Yang</div>
+  <div class="box">Gerald
     <img id="pfp" src="Gerald2.png">
   </div>
-  <div id="box">Valentine</div>
-  <div id="box">Ilakiya</div>
+  <div class="box">Valentine</div>
+  <div class="box">Ilakiya</div>
 </div>
 <script src="home.js"></script>
 </body>

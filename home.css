@@ -10,15 +10,31 @@
     height: 50px;
     border: 5px solid black;
     font-size: medium;
+    transition: 1s;
+}
+
+#nav button:hover{
+    background-color: rgb(190, 135, 75);
 }
 
 #nav button span{
     display: inline-block;
-    transition: transform 1s;
 }
 
 .spin{
     transform: rotate(360deg) ;
+    transition: transform 1s;
+}
+
+.ctf{
+  color: rgba(0,0,0,0);
+  background-color: rgb(180, 1, 1);
+  pointer-events: none;
+}
+
+#c,#t,#f{
+  position: relative;
+  transition: 1s;
 }
 
 .wrapper{
@@ -41,7 +57,7 @@
     overflow: hidden;
     margin-left: 5%;
 }
-.wrapper #box{
+.wrapper .box{
   border: 5px solid black;
   margin: 2px;
   font-family: Arial, Helvetica, sans-serif;
@@ -49,31 +65,31 @@
   text-align: center;
  }
 
-.wrapper #box:nth-child(1){
+.wrapper .box:nth-child(1){
     grid-column-start: 1;
     grid-column-end: 4;
     background-color: red;
 }
-.wrapper #box:nth-child(1) img{
+.wrapper .box:nth-child(1) img{
     display: block;
     height:100%;
     width: auto;
     margin: auto;
 }
-.wrapper #box:nth-child(2){
+.wrapper .box:nth-child(2){
     grid-row-start:2;
     grid-row-end: 4;
   background-color: orange;
 }
-.wrapper #box:nth-child(3){
+.wrapper .box:nth-child(3){
   background-color: yellow;
 }
-.wrapper #box:nth-child(4){
+.wrapper .box:nth-child(4){
   background-color: lightgreen;
 }
-.wrapper #box:nth-child(5){
+.wrapper .box:nth-child(5){
   background-color: blue;
 }
-.wrapper #box:nth-child(6){
+.wrapper .box:nth-child(6){
   background-color: purple;
 }
