@@ -7,15 +7,18 @@ if (window.scrollY%559!=0){
 }
 }
 function setscroll(){
+    document.body.style.overflowY="scroll";
     if (window.scrollY>currheight){
+        document.body.style.overflowY="hidden";
         currheight=Math.ceil(window.scrollY/559)*559;
         window.scrollTo(0,currheight);
     }
     else if (window.scrollY<currheight){
+        document.body.style.overflowY="hidden";
         currheight=Math.floor(window.scrollY/559)*559;
         window.scrollTo(0,currheight);
     }
-    setTimeout(setscroll,700)
+    setTimeout(setscroll,500)
 }
 
 setTimeout(restrictscroll, 900)

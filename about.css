@@ -18,6 +18,7 @@ body{
     border: 0.25vw solid white;
     background-color: white;
     overflow: hidden;
+    z-index: 10;
 }
 #prog{
     position: relative;
