@@ -8,6 +8,7 @@ function swapimg1(){
 function swapimg2(){
     document.getElementsByClassName("box")[1].getElementsByTagName("img")[0].src="THX1.jpeg";
 }
+
 let clickcounts =0;
 function CTF(){
     if (clickcounts<3){
@@ -21,3 +22,7 @@ function CTF(){
         console.log("CTF! CTF! CTF!")
     }
 }
+
+// while (true){
+//     document.getElementById("Ilakiya").getElementsByTagName("img")
+// }
