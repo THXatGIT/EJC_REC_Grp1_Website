@@ -24,9 +24,9 @@ body{
     position: relative;
     height:50vh;
     width: 1vw;
-    top:-80%;
-    background: linear-gradient( to top, white, white 4%, red 20%,red);
-    transition: 1s;
+    top:-84%;
+    background-color: red;
+    transition: 0.5s;
 }
 
 

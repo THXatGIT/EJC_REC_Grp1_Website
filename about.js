@@ -1,30 +1,37 @@
-let currheight=0;
+document.addEventListener("wheel",setscroll)
+
+let scrolling=false;
+let currheight=window.scrollY;
 function restrictscroll(){
 if (window.scrollY%559!=0){
     currheight=Math.floor(window.scrollY/559)*559;
     window.scrollTo(0,currheight);
-    console.log(currheight)
+    progbar()
 }
 }
-function setscroll(){
-    document.body.style.overflowY="scroll";
-    if (window.scrollY>currheight){
-        document.body.style.overflowY="hidden";
-        currheight=Math.ceil(window.scrollY/559)*559;
-        window.scrollTo(0,currheight);
+function setscroll(e){
+if (!scrolling){
+    if (e.deltaY<0){
+        scrolling=true;
+        window.scrollTo(0,currheight-559);
+        setTimeout(()=>{currheight=window.scrollY;progbar();scrolling=false},500)
     }
-    else if (window.scrollY<currheight){
-        document.body.style.overflowY="hidden";
-        currheight=Math.floor(window.scrollY/559)*559;
-        window.scrollTo(0,currheight);
+    else if (e.deltaY>0){
+        scrolling=true;
+       window.scrollTo(0,currheight+559);
+       setTimeout(()=>{currheight=window.scrollY;progbar();scrolling=false},500)
     }
-    setTimeout(setscroll,500)
+}
 }
 
 setTimeout(restrictscroll, 900)
-setTimeout(setscroll, 1100)
 
+let color=["red", "orange","yellow", "green", "blue","purple"]
 
+function progbar(){
+    document.getElementById("prog").style.backgroundColor=color[Math.floor(currheight/559)]
+    document.getElementById("prog").style.top=`${-(1-(Math.floor(currheight/559)+1)/6)*100}%`
+}
 
 function gif1(){
     document.getElementById("gif").src="Ikiylia2.png"

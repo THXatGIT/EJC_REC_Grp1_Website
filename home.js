@@ -23,6 +23,14 @@ function CTF(){
     }
 }
 
-// while (true){
-//     document.getElementById("Ilakiya").getElementsByTagName("img")
-// }
+function gif1(){
+    document.getElementById("gif").src="Ikiylia2.png"
+    setTimeout(gif2, 500)
+}
+
+function gif2(){
+    document.getElementById("gif").src="Ikiylia.png"
+    setTimeout(gif1, 500)
+}
+
+gif1()
