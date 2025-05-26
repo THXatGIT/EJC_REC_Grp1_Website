@@ -44,3 +44,39 @@ function gif2(){
 }
 
 gif1()
+
+// Leyang's code
+
+const a = document.querySelector('.swing-a');
+const n = document.querySelector('.swing-n');
+
+async function swingOneWay(el, angle, duration, easing) {
+    return el.animate(
+        [{ transform: 'rotate(0deg)' }, { transform: `rotate(${angle}deg)` }],
+        { duration, easing, fill: 'forwards' }
+    ).finished;
+}
+  
+async function swingBack(el, duration, easing) {
+    return el.animate(
+        [{ transform: el.style.transform }, { transform: 'rotate(0deg)' }],
+        { duration, easing, fill: 'forwards' }
+    ).finished;
+}
+  
+async function animateCradleLoop() {
+    while (true) {
+        await swingOneWay(a, 60, 300, 'ease-out');
+        await swingBack(a, 300, 'ease-in');
+  
+        await swingOneWay(n, -60, 300, 'ease-out');
+        await swingBack(n, 300, 'ease-in');
+    }
+}
+
+animateCradleLoop();
+
+function toggleText() {
+    const text = document.getElementById('extraText');
+    text.style.display = (text.style.display === 'none' || text.style.display === '') ? 'block' : 'none';
+}
