@@ -76,6 +76,39 @@ ol,ul{
     text-align: left;
 }
 
+@keyframes swim{
+    0%{transform: rotateY(0deg);}
+    5%{transform: rotateY(180deg);}
+   50%{transform: translate(15vw) rotateY(180deg)}
+   55%{transform: translate(15vw) rotateY(0deg)}
+   100%{transform: translate(0vw) rotateY(0deg);}
+}
+
+@keyframes typhoon{
+   35%{transform: translate(-40vw,5vh)}
+   55%{transform: translate(-20vw,-5vh)}
+   85%{transform: translate(10vw,-2vh)}
+   100%{transform: translate(0vw,0vh)}
+}
+
+#swim{
+    display: inline-block;
+    position: relative;
+    animation-name: swim;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#typhoon{
+    display: inline-block;
+    position: relative;
+    animation-name: typhoon;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
 /* Leyang's code */
 .leyang-tries-webdev-but-fails-horribly {
     display: flex;
