@@ -146,15 +146,7 @@ ol,ul{
 /* Leyang's code */
 .leyang-tries-webdev-but-fails-horribly {
     display: flex;
-    text-align: center;
-    align-items: center;
     justify-content: center;
-}
-  
-.letter {
-    display: inline-block;
-    transform-origin: top center;
-    transform-box: fill-box;
 }
 
 .swing-a,
@@ -165,11 +157,9 @@ ol,ul{
 .text-container {
     display: none;
     position: absolute;
-    top: 100%;
     left: 50%;
     transform: translateX(-50%);
     white-space: nowrap;
-    z-index: 1;
     font-size: 22px;
 }
 
@@ -186,6 +176,5 @@ ol,ul{
 #helpline {
     all: unset;
     color: blue;
-    font: inherit;
 }
 /*  */

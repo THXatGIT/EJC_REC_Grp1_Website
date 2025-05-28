@@ -2,9 +2,10 @@ document.addEventListener("wheel",setscroll)
 
 let scrolling=false;
 let currheight=window.scrollY;
+let contentheight=Math.floor(window.innerHeight*0.85+8)
 function restrictscroll(){
-if (window.scrollY%559!=0){
-    currheight=Math.floor(window.scrollY/559)*559;
+if (window.scrollY%contentheight!=0){
+    currheight=Math.floor(window.scrollY/contentheight)*contentheight;
     window.scrollTo(0,currheight);
     progbar()
 }
@@ -13,12 +14,12 @@ function setscroll(e){
 if (!scrolling){
     if (e.deltaY<0){
         scrolling=true;
-        window.scrollTo(0,currheight-559);
+        window.scrollTo(0,currheight-contentheight);
         setTimeout(()=>{currheight=window.scrollY;progbar();scrolling=false},500)
     }
     else if (e.deltaY>0){
         scrolling=true;
-       window.scrollTo(0,currheight+559);
+       window.scrollTo(0,currheight+contentheight);
        setTimeout(()=>{currheight=window.scrollY;progbar();scrolling=false},500)
     }
 }
@@ -29,8 +30,8 @@ setTimeout(restrictscroll, 900)
 let color=["red", "orange","yellow", "green", "blue","purple"]
 
 function progbar(){
-    document.getElementById("prog").style.backgroundColor=color[Math.floor(currheight/559)]
-    document.getElementById("prog").style.top=`${-(1-(Math.floor(currheight/559)+1)/6)*100}%`
+    document.getElementById("prog").style.backgroundColor=color[Math.floor(currheight/contentheight)]
+    document.getElementById("prog").style.top=`${-(1-(Math.floor(currheight/contentheight)+1)/6)*100}%`
 }
 
 function gif1(){
