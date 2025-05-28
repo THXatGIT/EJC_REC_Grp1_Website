@@ -20,6 +20,8 @@ function CTF(){
         document.getElementById("t").style.color="red";document.getElementById("t").style.transform="translate(575%)"
         document.getElementById("f").style.color="red";document.getElementById("f").style.transform="translate(200%)"
         console.log("CTF! CTF! CTF!")
+        CTFsound= new Audio("CTF.mp3")
+        CTFsound.play()
     }
 }
 

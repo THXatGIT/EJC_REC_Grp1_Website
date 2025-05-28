@@ -91,6 +91,18 @@ ol,ul{
    100%{transform: translate(0vw,0vh)}
 }
 
+@keyframes fly{
+    5%{transform: rotateZ(45deg)}
+    25%{transform:  translate(15vw) rotateZ(45deg)}
+    30%{transform: translate(15vw) rotateZ(135deg)}
+   50%{transform: translate(15vw,15vw) rotateZ(135deg)}
+   55%{transform: translate(15vw,15vw) rotateZ(225deg)}
+   75%{transform: translate(0,15vw) rotateZ(225deg)}
+   80%{transform: translate(0,15vw) rotateZ(315deg)}
+   100%{transform: translate(0vw,0) rotateZ(315deg) }
+
+}
+
 #swim{
     display: inline-block;
     position: relative;
@@ -107,6 +119,28 @@ ol,ul{
     animation-duration: 5s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+}
+
+#fly{
+    display: inline-block;
+    position: relative;
+    animation-name: fly;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes book-appear{
+    from{opacity: 0%; transform: translateY(-100%);}
+    to{opacity: 100%; transform: translateY(0%);}
+}
+
+#book{
+    display: inline-block;
+    position: relative;
+    animation-name: book-appear;
+    animation-duration: 0.75s;
+
 }
 
 /* Leyang's code */

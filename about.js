@@ -43,6 +43,13 @@ function gif2(){
     setTimeout(gif1, 500)
 }
 
+function BOOKS(){
+    let book=document.createElement("span")
+    book.id="book"
+    book.textContent="📚"
+    document.getElementById("books").appendChild(book)
+}
+
 gif1()
 
 // Leyang's code
